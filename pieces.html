@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Pieces</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Pieces</h1>
+
+[ <a href="index.html">Home</a> | <a href="collections.html">Collections</a> | <a href="sets.html">Sets</a> | <a href="pieces.html">Pieces</a> | <a href="customers.html">Customers</a> | <a href="sets_has_pieces.html">Sets Has Pieces</a> | <a href="sets_has_customers.html">Sets Has Customers</a> ]
+<div id="browse" style="display: block">
+<p><strong>Pieces List</strong></p>
+<p>View and Manage Lego Pieces</p>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>color</th>
+    <th>name</th>
+    <th>price</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >300326</td>
+    <td>Black</td>
+    <td>Brick 2x2</td>
+    <td>$0.18</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >4547224</td>
+    <td>Earth green</td>
+    <td>Left shell 3x10</td>
+    <td>$0.15</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >6266964</td>
+    <td>Bright green</td>
+    <td>Limb element</td>
+    <td>$0.05</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >6338181</td>
+    <td>Bright bluish green</td>
+    <td>Plate 2x4</td>
+    <td>$0.01</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >4177431</td>
+    <td>Black</td>
+    <td>Double conical</td>
+    <td>$0.02</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >6267125</td>
+    <td>Bright orange</td>
+    <td>Vegetable no.3</td>
+    <td>$0.02</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addSet">
+        <legend><strong>Add Piece</strong></legend>
+          <fieldset class="fields">
+            <label> ID </label> <input type="text" name="piece_id">
+            <label> Color </label> <input type="text" name="color">
+            <label> Name </label> <input type="text" name="name">
+            <label> Price </label> <input type="text" name="price">
+          </fieldset>
+          <input class="btn" type="submit" id="addSet" value="Add Piece">
+          <input class="btn" type="button" value="Cancel">
+	</form> <!--add new piece-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateSet">
+      <legend><strong>Edit Piece</strong></legend>
+          <fieldset class="fields">
+          <!-- <label>ID:</label> -->
+            <!-- <label> ID </label> <input type="text" name="set_id"> -->
+            <label> ID </label> <select name="piece_id">
+            	<option value="0">&nbsp;</option>
+                <option value="1" selected>300326</option>
+                <option value="2">4547224</option>
+                <option value="3">6266964</option>
+                <option value="4">6338181</option>
+                <option value="5">4177431</option>
+                <option value="6">6267125</option>
+                </select>
+            <label> Color </label> <input type="text" name="color">
+            <label> Name </label> <input type="text" name="name">
+            <label> Price </label> <input type="text" name="price">
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveSet" value="Update Piece">
+          <input class="btn" type="button" value="Cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<!-- <div id="delete" style="display: block">
+  <form id="deleteSet">
+      <legend><strong>Delete Piece</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>ID:</label> 1
+            <label> Name </label> Gemenon
+            
+    </fieldset>
+    <input class="btn" type="submit" id="DeleteSet" value="Delete Piece">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div>delete -->
+</body>
+</html>

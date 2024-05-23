@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>Sets</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Sets</h1>
+
+[ <a href="index.html">Home</a> | <a href="collections.html">Collections</a> | <a href="sets.html">Sets</a> | <a href="pieces.html">Pieces</a> | <a href="customers.html">Customers</a> | <a href="sets_has_pieces.html">Sets Has Pieces</a> | <a href="sets_has_customers.html">Sets Has Customers</a> ]
+<div id="browse" style="display: block">
+<p><strong>Sets List</strong></p>
+<p>View and Manage Lego Sets</p>
+
+<div id="search" style="display: block">
+  <form id="searchSets">
+      <legend><strong>Search Sets</strong></legend>
+        <fieldset class="fields">
+          <label> Set Name </label> <input type="text" name="name">
+          <input class="btn" type="submit" id="searchSets" value="Search Sets">
+        </fieldset>
+</form> <!--search customers-->
+</div><!-- search -->
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>name</th>
+    <th>release</th>
+    <th>min_age</th>
+    <th>retired</th>
+    <th>price</th>
+    <th>collection_name</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >10295</td>
+    <td>Porsche 911</td>
+    <td align="right" >2021-03-01</td>
+    <td>18</td>
+    <td>NULL</td>
+    <td>$169.99</td>
+    <td>Technic</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >10311</td>
+    <td>Orchid</td>
+    <td align="right" >2022-05-01</td>
+    <td>18</td>
+    <td>NULL</td>
+    <td>$49.99</td>
+    <td>Botanical</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >10281</td>
+    <td>Bonsai Tree</td>
+    <td align="right" >2021-01-02</td>
+    <td>18</td>
+    <td>NULL</td>
+    <td>$49.99</td>
+    <td>Botanical</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >40611</td>
+    <td>Year of the Dragon</td>
+    <td align="right" >2024-01-20</td>
+    <td>8</td>
+    <td>2024-02-06</td>
+    <td>$9.99</td>
+    <td>Lunar New Year</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >42083</td>
+    <td>Bugatti Chiron</td>
+    <td align="right" >2018-06-01</td>
+    <td>16</td>
+    <td>2022-12-31</td>
+    <td>$349.99</td>
+    <td>Technic</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >40648</td>
+    <td>Money Tree</td>
+    <td align="right" >2022-12-25</td>
+    <td>9</td>
+    <td>NULL</td>
+    <td>$24.99</td>
+    <td>Botanical</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addSet">
+        <legend><strong>Add Set</strong></legend>
+          <fieldset class="fields">
+            <label> ID </label> <input type="text" name="set_id">
+            <label> Name </label> <input type="text" name="name">
+            <label> Release Date </label> <input type="text" name="release">
+            <label> Minimum Age </label> <input type="text" name="min_age">
+            <label> Retired </label> <input type="text" name="retired">
+            <label> Price </label> <input type="text" name="price">
+            <!-- <label> Collection ID</label> <input type="text" name="collection_id"> -->
+            <label> Collection Name </label> <select name="collection_id">
+            	<option value="0">&nbsp;</option>
+                <option value="1" selected>Technic</option>
+                <option value="2">Botanical</option>
+                <option value="3">Lunar New Year</option>
+                </select>
+          </fieldset>
+          <input class="btn" type="submit" id="addSet" value="Add Set">
+          <input class="btn" type="button" value="Cancel">
+	</form> <!--add new set-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateSet">
+      <legend><strong>Edit Set</strong></legend>
+          <fieldset class="fields">
+          <!-- <label>ID:</label> -->
+            <!-- <label> ID </label> <input type="text" name="set_id"> -->
+            <label> ID </label> <select name="set_id">
+            	<option value="0">&nbsp;</option>
+                <option value="1" selected>10295</option>
+                <option value="2">10311</option>
+                <option value="3">10281</option>
+                <option value="4">40611</option>
+                <option value="5">42083</option>
+                <option value="5">40648</option>
+                </select>
+            <label> Name </label> <input type="text" name="name">
+            <label> Release Date </label> <input type="text"  name="release">
+            <label> Minimum Age </label> <input type="text" name="min_age">
+            <label> Retired </label> <input type="text" name="retired">
+            <label> Price </label> <input type="text" name="price">
+            <!-- <label> Collection ID </label> <input type="text" name="language"> -->
+            <label> Collection Name </label> <select name="collection_id">
+            	<option value="0">&nbsp;</option>
+                <option value="1" selected>Technic</option>
+                <option value="2">Botanical</option>
+                <option value="3">Lunar New Year</option>
+                </select>
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveSet" value="Update Set">
+          <input class="btn" type="button" value="Cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<!-- <div id="delete" style="display: block">
+  <form id="deleteSet">
+      <legend><strong>Delete Set</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>ID:</label> 1
+            <label> Name </label> Gemenon
+            
+    </fieldset>
+    <input class="btn" type="submit" id="DeleteSet" value="Delete Set">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div>delete -->
+</body>
+</html>
