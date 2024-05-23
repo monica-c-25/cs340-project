@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Collections</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Collections</h1>
+
+[ <a href="index.html">Home</a> | <a href="collections.html">Collections</a> | <a href="sets.html">Sets</a> | <a href="pieces.html">Pieces</a> | <a href="customers.html">Customers</a> | <a href="sets_has_pieces.html">Sets Has Pieces</a> | <a href="sets_has_customers.html">Sets Has Customers</a> ]
+<div id="browse" style="display: block">
+<p><strong>Collections List</strong></p>
+<p>View and Manage Lego Collections</p>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th><a href="#">New</a></th>
+    <th></th>
+    <th>ID</th>
+    <th>name</th>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >123</td>
+    <td >Technic</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >456</td>
+    <td>Botanical</td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
+    <td align="right" >789</td>
+    <td>Lunar New Year</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</div> <!-- browse -->
+<div id="insert" style="display: block">
+    <form id="addSet">
+        <legend><strong>Add Collection</strong></legend>
+          <fieldset class="fields">
+            <label> ID </label> <input type="text" name="collection_id">
+            <label> Name </label> <input type="text" name="name">
+          </fieldset>
+          <input class="btn" type="submit" id="addSet" value="Add Collection">
+          <input class="btn" type="button" value="Cancel">
+	</form> <!--add new collection-->
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display: block">
+  <form id="updateSet">
+      <legend><strong>Edit Collection</strong></legend>
+          <fieldset class="fields">
+          <!-- <label>ID:</label> -->
+            <!-- <label> ID </label> <input type="text" name="set_id"> -->
+            <label> ID </label> <select name="collection_id">
+            	<option value="0">&nbsp;</option>
+                <option value="1" selected>123</option>
+                <option value="2">456</option>
+                <option value="3">789</option>
+                </select>
+            <label> Name </label> <input type="text" name="name">
+    </fieldset>
+    <input class="btn" type="submit" id="UpdateSaveSet" value="Update Collection">
+          <input class="btn" type="button" value="Cancel" >
+  </form> 
+</div><!-- update -->
+<p>&nbsp;</p>
+<!-- <div id="delete" style="display: block">
+  <form id="deleteSet">
+      <legend><strong>Delete Collection</strong></legend>
+          <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <label>ID:</label> 1
+            <label> Name </label> Gemenon
+            
+    </fieldset>
+    <input class="btn" type="submit" id="DeleteSet" value="Delete Collection">
+          <input class="btn" type="button" value="cancel" >
+  </form> 
+</div>delete -->
+</body>
+</html>
