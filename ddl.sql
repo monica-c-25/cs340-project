@@ -3,14 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2024 at 07:32 PM
+-- Generation Time: May 22, 2024 at 08:17 PM
 -- Server version: 10.6.17-MariaDB-log
 -- PHP Version: 8.2.17
-
-
--- CS 340: Group 61 Team Twins: Monica Cao and Sidney Wong
-SET FOREIGN_KEY_CHECKS=0;
-SET AUTOCOMMIT = 0;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `Collections`
 --
 
-CREATE OR REPLACE TABLE `Collections` (
+CREATE TABLE `Collections` (
   `collection_id` int(11) NOT NULL,
   `collection_name` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
@@ -52,9 +47,8 @@ INSERT INTO `Collections` (`collection_id`, `collection_name`) VALUES
 -- Table structure for table `Customers`
 --
 
-CREATE OR REPLACE TABLE `Customers` (
-  -- `customer_id` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `Customers` (
+  `customer_id` int(11) NOT NULL,
   `customer_location` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
@@ -76,7 +70,7 @@ INSERT INTO `Customers` (`customer_id`, `customer_location`) VALUES
 -- Table structure for table `Pieces`
 --
 
-CREATE OR REPLACE TABLE `Pieces` (
+CREATE TABLE `Pieces` (
   `piece_id` int(11) NOT NULL,
   `piece_color` varchar(45) NOT NULL,
   `piece_name` varchar(45) NOT NULL,
@@ -101,13 +95,12 @@ INSERT INTO `Pieces` (`piece_id`, `piece_color`, `piece_name`, `piece_price`) VA
 -- Table structure for table `Sets`
 --
 
-CREATE OR REPLACE TABLE `Sets` (
+CREATE TABLE `Sets` (
   `set_id` int(11) NOT NULL,
   `set_name` varchar(45) NOT NULL,
   `set_release` date NOT NULL,
   `set_min_age` int(11) NOT NULL,
-  -- `set_retired` tinyint(4) NOT NULL DEFAULT 0,
-  `set_retired` tinyint(4) DEFAULT NULL,
+  `set_retired` date DEFAULT NULL,
   `set_price` decimal(10,2) NOT NULL,
   `Collections_collection_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
@@ -117,12 +110,12 @@ CREATE OR REPLACE TABLE `Sets` (
 --
 
 INSERT INTO `Sets` (`set_id`, `set_name`, `set_release`, `set_min_age`, `set_retired`, `set_price`, `Collections_collection_id`) VALUES
-(10281, 'Bonsai Tree', '2021-01-02', 18, 0, 49.99, 456),
-(10295, 'Porsche 911', '2021-03-01', 18, 0, 169.99, 123),
-(10311, 'Orchid', '2022-05-01', 18, 0, 49.99, 456),
-(40611, 'Year of the Dragon', '2024-01-20', 8, 127, 9.99, 789),
-(40648, 'Money Tree', '2022-12-25', 9, 0, 24.99, 456),
-(42083, 'Bugatti Chiron', '2018-06-01', 16, 127, 349.99, 123);
+(10281, 'Bonsai Tree', '2021-01-02', 18, NULL, 49.99, 456),
+(10295, 'Porsche 911', '2021-03-01', 18, NULL, 169.99, 123),
+(10311, 'Orchid', '2022-05-01', 18, NULL, 49.99, 456),
+(40611, 'Year of the Dragon', '2024-01-20', 8, '2024-02-06', 9.99, 789),
+(40648, 'Money Tree', '2022-12-25', 9, NULL, 24.99, 456),
+(42083, 'Bugatti Chiron', '2018-06-01', 16, '2022-12-31', 349.99, 123);
 
 -- --------------------------------------------------------
 
@@ -130,7 +123,7 @@ INSERT INTO `Sets` (`set_id`, `set_name`, `set_release`, `set_min_age`, `set_ret
 -- Table structure for table `Sets_has_Customers`
 --
 
-CREATE OR REPLACE TABLE `Sets_has_Customers` (
+CREATE TABLE `Sets_has_Customers` (
   `sets_set_id` int(11) NOT NULL,
   `customers_customer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
@@ -153,7 +146,7 @@ INSERT INTO `Sets_has_Customers` (`sets_set_id`, `customers_customer_id`) VALUES
 -- Table structure for table `Sets_has_Pieces`
 --
 
-CREATE OR REPLACE TABLE `Sets_has_Pieces` (
+CREATE TABLE `Sets_has_Pieces` (
   `sets_set_id` int(11) NOT NULL,
   `pieces_piece_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
@@ -256,7 +249,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-SET FOREIGN_KEY_CHECKS=1;
-COMMIT;
